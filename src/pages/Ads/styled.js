@@ -59,5 +59,77 @@ export const PageArea = styled.div`
 
     .rightSide {
         flex: 1;
+
+        h2 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .listWarning {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+
+            .aditem {
+                width: 33%;
+            }
+        }
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 10px 0;
+
+            .pagItem {
+                width: 30px;
+                height: 30px;
+                border: 1px solid #222;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                margin-right: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    border: 1px solid #666;
+                }
+
+                &.active {
+                    background-color: #CCC;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+
+        .leftSide {
+            width: auto;
+            margin: 10px;
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    width: 50%;
+                }
+            }
+        }
+
+        .rightSide {
+            margin: 10px;
+
+            .list .aditem {
+                width: 50%;
+            }
+        }
     }
 `
